@@ -1,0 +1,23 @@
+﻿@model EntityLayer.Cocrete.Customer
+@{
+    ViewData["Title"] = "AddCustomer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form method="post">
+
+    <br />
+    <label>Müşteri Adı</label>
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Name)
+    <br />
+    <label>Müşteri Şehri</label>
+    @Html.TextBoxFor(x => x.City, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.City)
+   
+    <br />
+    <button class="btn btn-success">EKLE</button>
+
+</form>
+
+
