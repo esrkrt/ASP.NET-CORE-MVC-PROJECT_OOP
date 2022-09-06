@@ -20,8 +20,8 @@
             <td>@item.Name</td>
             <td>@item.Price</td>
             <td>@item.Stock</td>
-            <td><a href="#" class="btn btn-outline-danger">Sil</a></td>
-            <td><a href="#" class="btn btn-outline-success">Güncelle</a></td>
+            <td><a href="/Product/DeleteProduct/@item.Id" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Product/UpdateProduct/@item.Id" class="btn btn-outline-success">Güncelle</a></td>
         </tr>
             }
 </table>

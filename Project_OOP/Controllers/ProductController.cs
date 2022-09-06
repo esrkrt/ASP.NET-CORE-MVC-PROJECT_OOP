@@ -45,5 +45,11 @@ namespace Project_OOP.Controllers
             }
             return View();
         }
+        public IActionResult DeleteProduct(int id)
+        {
+            var value = productmanager.TGetByID(id);
+            productmanager.TDelete(value);
+            return RedirectToAction("Index");
+        }
     }
 }
