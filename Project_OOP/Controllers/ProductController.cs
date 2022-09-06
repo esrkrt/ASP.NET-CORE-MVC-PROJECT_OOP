@@ -38,7 +38,7 @@ namespace Project_OOP.Controllers
             }
             else
             {
-                foreach(var item in result.Errors)
+                foreach (var item in result.Errors)
                 {
                     ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
                 }
@@ -51,5 +51,32 @@ namespace Project_OOP.Controllers
             productmanager.TDelete(value);
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public IActionResult UpdateProduct(int id)
+        {
+            var value = productmanager.TGetByID(id);
+            return View(value);
+        }
+        [HttpPost]
+        public IActionResult UpdateProduct(Product p)
+        {
+            ProductValidator validationRules = new ProductValidator();
+            ValidationResult result = validationRules.Validate(p);
+            if (result.IsValid)
+            {
+                productmanager.TUpdate(p);
+                return RedirectToAction("Index");
+
+            }
+            else
+            {
+                foreach (var item in result.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
+        }
+
     }
 }
