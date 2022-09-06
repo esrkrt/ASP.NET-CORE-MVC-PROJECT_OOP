@@ -9,12 +9,15 @@
     <br />
     <label>Ürün Adı</label>
     @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Name)
     <br />
     <label>Ürün Fiyatı</label>
     @Html.TextBoxFor(x => x.Price, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Price)
     <br />
     <label>Ürün Stok Sayısı</label>
     @Html.TextBoxFor(x => x.Stock, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Stock)
     <br />
     <button class="btn btn-success">EKLE</button>
 
