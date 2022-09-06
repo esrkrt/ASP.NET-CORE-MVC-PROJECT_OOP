@@ -32,8 +32,20 @@ namespace Project_OOP.Controllers
         }
         public IActionResult DeleteCustomer(int id)
         {
-            var value =customermanager.TGetByID(id);
-           customermanager.TDelete(value);
+            var value = customermanager.TGetByID(id);
+            customermanager.TDelete(value);
+            return RedirectToAction("Index");
+
+        }
+        public IActionResult UpdateCustomer(int id)
+        {
+            var value = customermanager.TGetByID(id);
+            return View(value);
+        }
+        [HttpPost]
+        public IActionResult UpdateCustomer(Customer p)
+        {
+            customermanager.TUpdate(p);
             return RedirectToAction("Index");
 
         }
