@@ -30,5 +30,12 @@ namespace Project_OOP.Controllers
             return RedirectToAction("Index");
 
         }
+        public IActionResult DeleteCustomer(int id)
+        {
+            var value =customermanager.TGetByID(id);
+           customermanager.TDelete(value);
+            return RedirectToAction("Index");
+
+        }
     }
 }
