@@ -9,5 +9,6 @@ namespace DataAccessLayer.Abstarct
 {
    public interface ICustomerDal:IGenericDal<Customer>
     {
+        List<Customer> GetListWithJob();
     }
 }
