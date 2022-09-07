@@ -37,6 +37,7 @@ namespace Project_OOP.Controllers
             return RedirectToAction("Index");
 
         }
+        [HttpGet]
         public IActionResult UpdateCustomer(int id)
         {
             var value = customermanager.TGetByID(id);

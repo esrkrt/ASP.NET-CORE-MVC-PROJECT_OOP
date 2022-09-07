@@ -51,8 +51,8 @@ namespace Project_OOP.Controllers
             productmanager.TDelete(value);
             return RedirectToAction("Index");
         }
-        [HttpGet]
-        public IActionResult UpdateProduct(int id)
+      [HttpGet]
+          public IActionResult UpdateProduct(int id)
         {
             var value = productmanager.TGetByID(id);
             return View(value);

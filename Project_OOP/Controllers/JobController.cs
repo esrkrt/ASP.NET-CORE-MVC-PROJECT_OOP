@@ -30,5 +30,23 @@ namespace Project_OOP.Controllers
             return RedirectToAction("Index");
 
         }
+        public IActionResult DeleteJob(int id)
+        {
+            var value = jobManger.TGetByID(id);
+            jobManger.TDelete(value);
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public IActionResult UpdateJob1(int id)
+        {
+            var value = jobManger.TGetByID(id);
+            return View(value);
+        }
+        [HttpPost]
+        public IActionResult UpdateJob1(Job p)
+        {
+            jobManger.TUpdate(p);
+            return RedirectToAction("Index");
+        }
     }
 }
