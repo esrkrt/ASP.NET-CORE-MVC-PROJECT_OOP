@@ -1,0 +1,12 @@
+*Arama Ýþlemi
+*Üyelik Sistemi
+*Identity Kütüphanesi
+*Yardým pop up
+*Footer*************************************
+-*Ayarlar
+*Çýkýþ Yap
+* Giriþ Yap
+*Yeni Üye Kaydý
+*Admin-->AspNet User
+*Publish
+*Projenin Canlýya Taþýnmasý
