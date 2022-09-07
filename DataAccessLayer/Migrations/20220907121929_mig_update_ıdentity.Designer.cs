@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20220907110124_mig01")]
-    partial class mig01
+    [Migration("20220907121929_mig_update_ıdentity")]
+    partial class mig_update_ıdentity
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
