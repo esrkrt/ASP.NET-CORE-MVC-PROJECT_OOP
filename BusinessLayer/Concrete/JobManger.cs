@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    public class JobManger : IJobService
+    public class JobManger :IGenericService<Job>
     {
         IJobDal _jobdal;
 
