@@ -1,8 +1,33 @@
-﻿
+﻿@model Project_OOP.Models.UserEditeViewModel
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Profil Bilgileri Düzenleme Sayfası</h1>
+<form method="post">
+
+    <br />
+    <label>Adınız</label>
+    <input type="text" asp-for="Name" class="form-control" />
+    <br />
+    <label>Soyadınız</label>
+    <input type="text" asp-for="SurName" class="form-control" />
+    <br />
+    <label>Mail Adresiniz</label>
+    <input type="text" asp-for="Mail" class="form-control" />
+    <br />
+    <label>Cinsiyetiniz</label>
+    <input type="text" asp-for="Gender" class="form-control" />
+    <br />
+    <label>Şifre</label>
+    <input type="text" asp-for="Password" class="form-control" />
+    <br />
+    <label>Şifre Tekrar</label>
+    <input type="text" asp-for="ConfirmPassword" class="form-control" />
+    <br />
+    <button class="btn btn-success">Değişiklikleri Kaydet</button>
+
+</form>
+
 
